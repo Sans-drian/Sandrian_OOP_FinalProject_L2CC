@@ -201,9 +201,7 @@ public class GameLogic {
             randomBattle();
         } else {
             takeRest();
-        } // else {
-            //shop();
-        //}
+        }
 
     }
 
@@ -350,8 +348,8 @@ public class GameLogic {
                         break;
                     }
 
-                } else {
-                    if (player.hp <= 0) {
+                } else { //else statement for when act = 4
+                    if (player.hp <= 0) { //instead of telling the player died, this breaks the loop and moves out of battle() in finalBattle() method
                         break;
                     } else if (enemy.hp <= 0){
                         //tell the player they won
